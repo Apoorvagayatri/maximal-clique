@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/apoorvagayatri/maximal-clique/static/css/main.a9158833.css",
-    "main.js": "/apoorvagayatri/maximal-clique/static/js/main.7434270a.js",
-    "static/js/453.a9c7c821.chunk.js": "/apoorvagayatri/maximal-clique/static/js/453.a9c7c821.chunk.js",
-    "static/media/Tomitaenron.jpg": "/apoorvagayatri/maximal-clique/static/media/Tomitaenron.62edfd78833331db0ec8.jpg",
-    "static/media/Tomitawiki.jpg": "/apoorvagayatri/maximal-clique/static/media/Tomitawiki.86e5ed8af9701d78015c.jpg",
-    "static/media/Chibaenron.jpg": "/apoorvagayatri/maximal-clique/static/media/Chibaenron.a3600500e0d56f290968.jpg",
-    "static/media/ELSoverall.jpg": "/apoorvagayatri/maximal-clique/static/media/ELSoverall.931b57fbdfd1d7d710da.jpg",
-    "static/media/Chibawiki.jpg": "/apoorvagayatri/maximal-clique/static/media/Chibawiki.eccf435cd6c3548b9cec.jpg",
-    "static/media/Chibaskitter.jpg": "/apoorvagayatri/maximal-clique/static/media/Chibaskitter.f28c7182a5645360a2e8.jpg",
-    "static/media/Tomitaoverall.jpg": "/apoorvagayatri/maximal-clique/static/media/Tomitaoverall.f2fad56e7e619056099a.jpg",
-    "static/media/ELSenron.jpg": "/apoorvagayatri/maximal-clique/static/media/ELSenron.4ac110487e0e1136a5a2.jpg",
-    "static/media/ELSskitter.jpg": "/apoorvagayatri/maximal-clique/static/media/ELSskitter.3157c093649241de7d59.jpg",
-    "static/media/ELSwiki.jpg": "/apoorvagayatri/maximal-clique/static/media/ELSwiki.f0318792cc9d96eae4c3.jpg",
-    "index.html": "/apoorvagayatri/maximal-clique/index.html",
-    "main.a9158833.css.map": "/apoorvagayatri/maximal-clique/static/css/main.a9158833.css.map",
-    "main.7434270a.js.map": "/apoorvagayatri/maximal-clique/static/js/main.7434270a.js.map",
-    "453.a9c7c821.chunk.js.map": "/apoorvagayatri/maximal-clique/static/js/453.a9c7c821.chunk.js.map"
+    "main.css": "/maximal-clique/static/css/main.a9158833.css",
+    "main.js": "/maximal-clique/static/js/main.fdc3623a.js",
+    "static/js/453.a9c7c821.chunk.js": "/maximal-clique/static/js/453.a9c7c821.chunk.js",
+    "static/media/Tomitaenron.jpg": "/maximal-clique/static/media/Tomitaenron.62edfd78833331db0ec8.jpg",
+    "static/media/Tomitawiki.jpg": "/maximal-clique/static/media/Tomitawiki.86e5ed8af9701d78015c.jpg",
+    "static/media/Chibaenron.jpg": "/maximal-clique/static/media/Chibaenron.a3600500e0d56f290968.jpg",
+    "static/media/ELSoverall.jpg": "/maximal-clique/static/media/ELSoverall.931b57fbdfd1d7d710da.jpg",
+    "static/media/Chibawiki.jpg": "/maximal-clique/static/media/Chibawiki.eccf435cd6c3548b9cec.jpg",
+    "static/media/Chibaskitter.jpg": "/maximal-clique/static/media/Chibaskitter.f28c7182a5645360a2e8.jpg",
+    "static/media/Tomitaoverall.jpg": "/maximal-clique/static/media/Tomitaoverall.f2fad56e7e619056099a.jpg",
+    "static/media/ELSenron.jpg": "/maximal-clique/static/media/ELSenron.4ac110487e0e1136a5a2.jpg",
+    "static/media/ELSskitter.jpg": "/maximal-clique/static/media/ELSskitter.3157c093649241de7d59.jpg",
+    "static/media/ELSwiki.jpg": "/maximal-clique/static/media/ELSwiki.f0318792cc9d96eae4c3.jpg",
+    "index.html": "/maximal-clique/index.html",
+    "main.a9158833.css.map": "/maximal-clique/static/css/main.a9158833.css.map",
+    "main.fdc3623a.js.map": "/maximal-clique/static/js/main.fdc3623a.js.map",
+    "453.a9c7c821.chunk.js.map": "/maximal-clique/static/js/453.a9c7c821.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a9158833.css",
-    "static/js/main.7434270a.js"
+    "static/js/main.fdc3623a.js"
   ]
 }
