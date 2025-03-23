@@ -2,7 +2,7 @@
   "name": "temp-maximal-clique",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://apoorvagayatrik.github.io/temp-maximal-clique",
+  "homepage": "https://Apoorvagayatrik.github.io/temp-maximal-clique",
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
