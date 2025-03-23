@@ -70,6 +70,7 @@ in the original implementation of algorithm, made multiple recursive intersectio
       </section>
 
       {/* ELS Algorithm Observations */}
+      
       <section className="observation-section">
         <h2>2. Eppstein, Löffler & Strash (ELS) Algorithm</h2>
         <p>
@@ -80,15 +81,29 @@ in the original implementation of algorithm, made multiple recursive intersectio
         <ul>
           <li><strong>Email-Enron:</strong> 9.719s | 226,859 maximal cliques (Largest Clique: 20, Avg: 8.08, Std Dev: 3.32)</li>
           <li><strong>Wiki-Vote:</strong> 12.119s | 459,002 maximal cliques (Largest Clique: 17, Avg: 7.32, Std Dev: 2.35)</li>
-          <li><strong>As-Skitter:</strong> 37.7 min | 37,332,355 maximal cliques (Largest Clique: 67, Avg: 19.94, Std Dev: 12.91)</li>
+          <li><strong>As-Skitter:</strong> 37.7 min | 40,001,624 maximal cliques (Largest Clique: 67, Avg: 19.94, Std Dev: 12.91)</li>
         </ul>
 
         <h3>Observations</h3>
+        <p>The Bron-Kerbosch algorithm with degeneracy ordering optimization demonstrates exceptional scalability, handling the massive as-skitter dataset with over 40 million maximal cliques in approximately 37 minutes. 
+          This performance validates the theoretical efficiency improvements claimed in the literature.<br></br>
         <ul>
-          <li>Handles small datasets efficiently within seconds.</li>
-          <li>Scales well even for large graphs like As-Skitter.</li>
-          <li>Degeneracy ordering improves performance by reducing redundant recursion.</li>
+        Data Structure Choices
+          <li>unordered_set for adjacency lists enables O(1) edge lookups</li>
+          <li>priority_queue with custom comparator for efficient degeneracy ordering</li>
+          <li>Vector of unordered sets for graph representation</li>
         </ul>
+        </p>
+        <p>The algorithm selects pivot vertex with maximum connections to candidate set P.Pivot selection minimizes branching factor in recursive calls.
+          It considers both P and X sets when selecting pivot for optimal pruning.It also uses set operations instead of expensive graph copying</p>
+        <p>
+        The implementation of degeneracy ordering using a priority queue optimizes vertex processing by ensuring vertices with lower degrees are processed first, reducing the size of candidate sets in recursive calls and efficiently capturing degree updates through new insertions. This approach guarantees improved worst-case performance, bounding potential maximal cliques to O(3^ (d/3) ) for a graph with degeneracy d, compared to the general 𝑂(3^(𝑛/3)) for n vertices, offering significant practical gains in sparse real-world networks where d&lt;&lt;n. Additionally, by processing vertices in degeneracy order, the algorithm minimizes memory usage by maintaining smaller intermediate sets during recursion, which is crucial for analyzing massive datasets like as-skitter without exceeding memory limits. The sorted edge processing further enhances load balancing within the recursive call tree, preventing computational bottlenecks by addressing smaller subproblems first.
+        </p>
+        
+        <p>
+        The clear distinction in clique sizes between Email-Enron, Wiki-Vote, and as-skitter suggests that social and internet-based networks have fundamentally different clustering behaviors.<br></br>
+Variance in clique size is another insightful metric; as-skitter's higher variance implies irregular clustering, while the lower variance in Email-Enron and Wiki-Vote suggests more consistent communication patterns.
+        </p>
 
         <h3>Future Improvements</h3>
         <ul>
