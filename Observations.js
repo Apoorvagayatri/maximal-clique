@@ -71,7 +71,7 @@ in the original implementation of algorithm, made multiple recursive intersectio
 
       {/* ELS Algorithm Observations */}
       
-      <section className="observation-section">
+    <section className="observation-section">
         <h2>2. Eppstein, Löffler & Strash (ELS) Algorithm</h2>
         <p>
           The Bron-Kerbosch-based algorithm is optimized with degeneracy ordering, enabling efficient maximal clique enumeration.
