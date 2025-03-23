@@ -2,7 +2,6 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import "./App.css";
 import Overview from "./Overview";
-import Algorithms from "./Algorithms";
 import Results from "./Results";
 import Observations from "./Observations";
 import Conclusions from "./Conclusions";
@@ -20,7 +19,6 @@ const App = () => {
         <nav>
           <ul>
             <li><Link to="/overview">Overview</Link></li>
-            <li><Link to="/algorithms">Algorithms</Link></li>
             <li><Link to="/observations">Observations</Link></li>
             <li><Link to="/results">Results</Link></li>
             <li><Link to="/conclusions">Conclusions</Link></li>
@@ -43,7 +41,6 @@ const App = () => {
           
           {/* Other Pages */}
           <Route path="/overview" element={<Overview />} />
-          <Route path="/algorithms" element={<Algorithms />} />
           <Route path="/results" element={<Results />} />
           <Route path="/observations" element={<Observations />} />
           <Route path="/conclusions" element={<Conclusions />} />

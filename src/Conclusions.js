@@ -4,58 +4,78 @@ import "./Conclusions.css";
 const Conclusions = () => {
   return (
     <div className="conclusions-container">
-      <h2>Conclusions</h2>
-      
-      <section>
-        <h3>Algorithm Performance Comparison</h3>
-        <p>
-          After analyzing the three maximal clique enumeration algorithms (Tomita, 
-          Eppstein-Löffler-Strash, and Chiba-Nishizeki) across different datasets,
-          we can draw the following conclusions:
-        </p>
-        
-        <ul>
-          <li>
-            <strong>Runtime Efficiency:</strong> The Eppstein-Löffler-Strash algorithm 
-            consistently showed better performance on large sparse graphs, while Tomita's 
-            algorithm performed well on denser graphs.
-          </li>
-          <li>
-            <strong>Memory Usage:</strong> Chiba-Nishizeki's algorithm demonstrated the 
-            lowest memory footprint, making it suitable for memory-constrained environments.
-          </li>
-          <li>
-            <strong>Scalability:</strong> All algorithms showed degrading performance with 
-            increasing graph size, but ELS was the most scalable for very large networks.
-          </li>
-        </ul>
-      </section>
+      <h2>Comparative Analysis</h2>
 
-      <section>
-        <h3>Practical Recommendations</h3>
-        <p>Based on our findings, we recommend:</p>
-        
-        <ul>
-          <li>For social network analysis: Use ELS algorithm due to its efficiency with sparse graphs</li>
-          <li>For dense biological networks: Consider Tomita's algorithm</li>
-          <li>For resource-constrained environments: Chiba-Nishizeki offers the best memory-performance trade-off</li>
-        </ul>
-      </section>
-
-      <section>
-        <h3>Future Work</h3>
-        <p>
-          Our study opens several avenues for future research:
-        </p>
-        
-        <ul>
-          <li>Exploration of parallel implementations for further performance gains</li>
-          <li>Hybrid approaches combining strengths of different algorithms</li>
-          <li>Application-specific optimizations for domains like bioinformatics or social network analysis</li>
-        </ul>
-      </section>
+      <table>
+        <thead>
+          <tr>
+            <th>Metric</th>
+            <th>Degeneracy Ordering</th>
+            <th>Chiba Algorithm</th>
+            <th>Tomita Algorithm</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Time Complexity</td>
+            <td>O(3^(d/3)) where d is degeneracy</td>
+            <td>O(3^(n/3))</td>
+            <td>O(3^(n/3))</td>
+          </tr>
+          <tr>
+            <td>Memory Efficiency</td>
+            <td>High (minimizes intermediate sets)</td>
+            <td>Moderate (uses unordered sets)</td>
+            <td>Variable (depends on implementation)</td>
+          </tr>
+          <tr>
+            <td>Performance on Wiki-Vote</td>
+            <td>9.5s, ~460,000 maximal cliques</td>
+            <td>Fastest due to sparsity</td>
+            <td>11,012 ms, 459,002 maximal cliques</td>
+          </tr>
+          <tr>
+            <td>Performance on Email-Enron</td>
+            <td>25 s, ~230,000 maximal cliques</td>
+            <td>Slower due to higher edge density</td>
+            <td>294,561 ms, 226,859 maximal cliques</td>
+          </tr>
+          <tr>
+            <td>Performance on as-Skitter</td>
+            <td>~373,323,355 maximal cliques</td>
+            <td>Slowest due to extreme density</td>
+            <td>49h 18m 39s, 373,323,355 maximal cliques</td>
+          </tr>
+          <tr>
+            <td>Key Optimization</td>
+            <td>Degeneracy ordering with priority queue</td>
+            <td>Pivot selection based on degree</td>
+            <td>Optimized pivot selection function</td>
+          </tr>
+          <tr>
+            <td>Average Clique Size (Wiki-Vote)</td>
+            <td>7.32</td>
+            <td>7.32</td>
+            <td>7.22</td>
+          </tr>
+          <tr>
+            <td>Average Clique Size (Email-Enron)</td>
+            <td>8.08</td>
+            <td>8.08</td>
+            <td>8.07</td>
+          </tr>
+          <tr>
+            <td>Average Clique Size (as-Skitter)</td>
+            <td>19.94</td>
+            <td>19.94</td>
+            <td>19.95</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   );
 };
 
 export default Conclusions; 
+
+
